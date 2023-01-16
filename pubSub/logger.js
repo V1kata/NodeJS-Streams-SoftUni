@@ -1,0 +1,13 @@
+const eventBus = require('./eventBus');
+
+const log = (data) => {
+    console.log(`Logger ${data.url}`);
+}
+
+eventBus.subscribe('request', log)
+
+const logger = {
+    log
+}
+
+module.exports = logger;
